@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+## Project Requirements
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Home page to show all the jobs
+- (optional) Job detail page & apply button
+- Admin dashboard page
+- Crud operations for jobs in admin dashboard
+- login page
+- storing login data in local storage
+- adding pagination to home page and admin dashboard page
+- Admin dashboard route - company management
+- /dashboard/company-management --
+  - Add company
+  - list of companies
+  - admin to view company details
+  - in company details, admin can see all the jobs posted by that company
+  - /dashboard/job-management
+    - add new job
+    - update job
+    - delete job
+    - display all jobs with pagination
