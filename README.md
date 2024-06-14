@@ -1,5 +1,12 @@
 # Jobify Backend
 
+## Admin Credentials
+
+```plaintext
+ Email: admin@jobify.com
+ Password: admin
+```
+
 ## Project Requirements
 
 ### User
