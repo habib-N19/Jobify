@@ -1,0 +1,556 @@
+[
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e1b",
+        "title": "Software Engineer",
+        "description": "Develop and maintain software applications.",
+        "company": "60d5ec49f1f6e04b8c8e6e1a",
+        "salary": 95000,
+        "location": "San Francisco, CA",
+        "createdAt": "2024-01-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e1c",
+        "title": "Product Manager",
+        "description": "Oversee product development and strategy.",
+        "company": "60d5ec49f1f6e04b8c8e6e1a",
+        "salary": 120000,
+        "location": "San Francisco, CA",
+        "createdAt": "2024-01-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e1e",
+        "title": "Renewable Energy Engineer",
+        "description": "Design and implement renewable energy systems.",
+        "company": "60d5ec49f1f6e04b8c8e6e1d",
+        "salary": 85000,
+        "location": "Austin, TX",
+        "createdAt": "2024-02-15T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e20",
+        "title": "Nurse",
+        "description": "Provide healthcare services to patients.",
+        "company": "60d5ec49f1f6e04b8c8e6e1f",
+        "salary": 75000,
+        "location": "Miami, FL",
+        "createdAt": "2024-03-10T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e21",
+        "title": "Medical Assistant",
+        "description": "Assist in clinical tasks and patient care.",
+        "company": "60d5ec49f1f6e04b8c8e6e1f",
+        "salary": 40000,
+        "location": "Miami, FL",
+        "createdAt": "2024-03-10T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e22",
+        "title": "Healthcare Administrator",
+        "description": "Manage healthcare facility operations.",
+        "company": "60d5ec49f1f6e04b8c8e6e1f",
+        "salary": 95000,
+        "location": "Miami, FL",
+        "createdAt": "2024-03-10T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e24",
+        "title": "Financial Analyst",
+        "description": "Analyze financial data and trends.",
+        "company": "60d5ec49f1f6e04b8c8e6e23",
+        "salary": 80000,
+        "location": "New York, NY",
+        "createdAt": "2024-04-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e25",
+        "title": "Accountant",
+        "description": "Manage financial records and transactions.",
+        "company": "60d5ec49f1f6e04b8c8e6e23",
+        "salary": 70000,
+        "location": "New York, NY",
+        "createdAt": "2024-04-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e27",
+        "title": "Teacher",
+        "description": "Teach and mentor students.",
+        "company": "60d5ec49f1f6e04b8c8e6e26",
+        "salary": 55000,
+        "location": "Boston, MA",
+        "createdAt": "2024-05-20T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e29",
+        "title": "Chef",
+        "description": "Prepare and cook meals.",
+        "company": "60d5ec49f1f6e04b8c8e6e28",
+        "salary": 60000,
+        "location": "Chicago, IL",
+        "createdAt": "2024-01-30T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e2a",
+        "title": "Restaurant Manager",
+        "description": "Oversee restaurant operations.",
+        "company": "60d5ec49f1f6e04b8c8e6e28",
+        "salary": 75000,
+        "location": "Chicago, IL",
+        "createdAt": "2024-01-30T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e2c",
+        "title": "Automotive Technician",
+        "description": "Repair and maintain vehicles.",
+        "company": "60d5ec49f1f6e04b8c8e6e2b",
+        "salary": 55000,
+        "location": "Detroit, MI",
+        "createdAt": "2024-06-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e2e",
+        "title": "Travel Agent",
+        "description": "Assist clients in planning their travel.",
+        "company": "60d5ec49f1f6e04b8c8e6e2d",
+        "salary": 45000,
+        "location": "Orlando, FL",
+        "createdAt": "2024-02-20T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e2f",
+        "title": "Tour Guide",
+        "description": "Lead tours and provide information.",
+        "company": "60d5ec49f1f6e04b8c8e6e2d",
+        "salary": 40000,
+        "location": "Orlando, FL",
+        "createdAt": "2024-02-20T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e31",
+        "title": "Content Creator",
+        "description": "Create and manage media content.",
+        "company": "60d5ec49f1f6e04b8c8e6e30",
+        "salary": 60000,
+        "location": "Los Angeles, CA",
+        "createdAt": "2024-03-30T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e33",
+        "title": "Sales Associate",
+        "description": "Assist customers and drive sales.",
+        "company": "60d5ec49f1f6e04b8c8e6e32",
+        "salary": 40000,
+        "location": "Dallas, TX",
+        "createdAt": "2024-04-15T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e35",
+        "title": "Logistics Coordinator",
+        "description": "Coordinate logistics and supply chain operations.",
+        "company": "60d5ec49f1f6e04b8c8e6e34",
+        "salary": 50000,
+        "location": "Memphis, TN",
+        "createdAt": "2024-05-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e37",
+        "title": "Fashion Designer",
+        "description": "Design clothing and accessories.",
+        "company": "60d5ec49f1f6e04b8c8e6e36",
+        "salary": 70000,
+        "location": "New York, NY",
+        "createdAt": "2024-03-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e39",
+        "title": "Construction Manager",
+        "description": "Oversee construction projects and teams.",
+        "company": "60d5ec49f1f6e04b8c8e6e38",
+        "salary": 90000,
+        "location": "Denver, CO",
+        "createdAt": "2024-02-05T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e3b",
+        "title": "Paralegal",
+        "description": "Assist lawyers in case preparation.",
+        "company": "60d5ec49f1f6e04b8c8e6e3a",
+        "salary": 50000,
+        "location": "Washington, DC",
+        "createdAt": "2024-05-10T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e3d",
+        "title": "Fitness Trainer",
+        "description": "Provide fitness training and guidance.",
+        "company": "60d5ec49f1f6e04b8c8e6e3c",
+        "salary": 45000,
+        "location": "Chicago, IL",
+        "createdAt": "2024-01-25T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e3f",
+        "title": "Data Scientist",
+        "description": "Analyze and interpret complex data.",
+        "company": "60d5ec49f1f6e04b8c8e6e3e",
+        "salary": 110000,
+        "location": "Silicon Valley, CA",
+        "createdAt": "2024-03-20T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e41",
+        "title": "Yoga Instructor",
+        "description": "Teach yoga classes and workshops.",
+        "company": "60d5ec49f1f6e04b8c8e6e40",
+        "salary": 40000,
+        "location": "Seattle, WA",
+        "createdAt": "2024-04-10T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e43",
+        "title": "Agricultural Technician",
+        "description": "Assist in agricultural research and production.",
+        "company": "60d5ec49f1f6e04b8c8e6e42",
+        "salary": 45000,
+        "location": "Des Moines, IA",
+        "createdAt": "2024-06-05T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e45",
+        "title": "Aerospace Engineer",
+        "description": "Design and develop aerospace systems.",
+        "company": "60d5ec49f1f6e04b8c8e6e44",
+        "salary": 100000,
+        "location": "Houston, TX",
+        "createdAt": "2024-02-28T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e47",
+        "title": "Spacecraft Technician",
+        "description": "Maintain and repair spacecraft.",
+        "company": "60d5ec49f1f6e04b8c8e6e46",
+        "salary": 95000,
+        "location": "Cape Canaveral, FL",
+        "createdAt": "2024-05-25T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    }
+]
+[
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e1a",
+        "name": "Tech Solutions",
+        "industry": "Software Development",
+        "contactEmail": "contact@techsolutions.com",
+        "address": "123 Tech Lane, San Francisco, CA",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e1b",
+            "60d5ec49f1f6e04b8c8e6e1c"
+        ],
+        "createdAt": "2024-01-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e1d",
+        "name": "Green Energy Inc.",
+        "industry": "Renewable Energy",
+        "contactEmail": "info@greenenergy.com",
+        "address": "456 Greenway, Austin, TX",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e1e"
+        ],
+        "createdAt": "2024-02-15T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e1f",
+        "name": "Health First",
+        "industry": "Healthcare",
+        "contactEmail": "careers@healthfirst.com",
+        "address": "789 Health Ave, Miami, FL",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e20",
+            "60d5ec49f1f6e04b8c8e6e21",
+            "60d5ec49f1f6e04b8c8e6e22"
+        ],
+        "createdAt": "2024-03-10T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e23",
+        "name": "Finance Hub",
+        "industry": "Finance",
+        "contactEmail": "jobs@financehub.com",
+        "address": "101 Finance St, New York, NY",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e24",
+            "60d5ec49f1f6e04b8c8e6e25"
+        ],
+        "createdAt": "2024-04-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e26",
+        "name": "Edu Learn",
+        "industry": "Education",
+        "contactEmail": "hr@edulearn.com",
+        "address": "202 Education Blvd, Boston, MA",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e27"
+        ],
+        "createdAt": "2024-05-20T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e28",
+        "name": "Foodies United",
+        "industry": "Food & Beverage",
+        "contactEmail": "careers@foodiesunited.com",
+        "address": "303 Gourmet St, Chicago, IL",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e29",
+            "60d5ec49f1f6e04b8c8e6e2a"
+        ],
+        "createdAt": "2024-01-30T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e2b",
+        "name": "Auto Experts",
+        "industry": "Automotive",
+        "contactEmail": "hr@autoexperts.com",
+        "address": "404 Auto Blvd, Detroit, MI",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e2c"
+        ],
+        "createdAt": "2024-06-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e2d",
+        "name": "Travel Wide",
+        "industry": "Tourism",
+        "contactEmail": "jobs@travelwide.com",
+        "address": "505 Travel Rd, Orlando, FL",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e2e",
+            "60d5ec49f1f6e04b8c8e6e2f"
+        ],
+        "createdAt": "2024-02-20T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e30",
+        "name": "Media Hub",
+        "industry": "Media & Entertainment",
+        "contactEmail": "careers@mediahub.com",
+        "address": "606 Media Ave, Los Angeles, CA",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e31"
+        ],
+        "createdAt": "2024-03-30T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e32",
+        "name": "Retail World",
+        "industry": "Retail",
+        "contactEmail": "jobs@retailworld.com",
+        "address": "707 Retail Dr, Dallas, TX",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e33"
+        ],
+        "createdAt": "2024-04-15T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e34",
+        "name": "Logistics Co",
+        "industry": "Logistics",
+        "contactEmail": "hr@logisticsco.com",
+        "address": "808 Logistics St, Memphis, TN",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e35"
+        ],
+        "createdAt": "2024-05-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e36",
+        "name": "Fashion Forward",
+        "industry": "Fashion",
+        "contactEmail": "jobs@fashionforward.com",
+        "address": "909 Fashion Rd, New York, NY",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e37"
+        ],
+        "createdAt": "2024-03-01T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e38",
+        "name": "Build It",
+        "industry": "Construction",
+        "contactEmail": "hr@buildit.com",
+        "address": "1010 Construction Blvd, Denver, CO",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e39"
+        ],
+        "createdAt": "2024-02-05T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e3a",
+        "name": "Legal Experts",
+        "industry": "Legal",
+        "contactEmail": "jobs@legalexperts.com",
+        "address": "1111 Justice Rd, Washington, DC",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e3b"
+        ],
+        "createdAt": "2024-05-10T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e3c",
+        "name": "Sports United",
+        "industry": "Sports",
+        "contactEmail": "hr@sportsunited.com",
+        "address": "1212 Sports Lane, Chicago, IL",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e3d"
+        ],
+        "createdAt": "2024-01-25T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e3e",
+        "name": "Tech Innovators",
+        "industry": "Technology",
+        "contactEmail": "jobs@techinnovators.com",
+        "address": "1313 Innovation Dr, Silicon Valley, CA",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e3f"
+        ],
+        "createdAt": "2024-03-20T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e40",
+        "name": "Wellness Co",
+        "industry": "Wellness",
+        "contactEmail": "careers@wellnessco.com",
+        "address": "1414 Wellness Blvd, Seattle, WA",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e41"
+        ],
+        "createdAt": "2024-04-10T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e42",
+        "name": "AgriGrow",
+        "industry": "Agriculture",
+        "contactEmail": "jobs@agrigrow.com",
+        "address": "1515 Agri Rd, Des Moines, IA",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e43"
+        ],
+        "createdAt": "2024-06-05T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e44",
+        "name": "AeroTech",
+        "industry": "Aerospace",
+        "contactEmail": "careers@aerotech.com",
+        "address": "1616 Aerospace Ave, Houston, TX",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e45"
+        ],
+        "createdAt": "2024-02-28T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    },
+    {
+        "_id": "60d5ec49f1f6e04b8c8e6e46",
+        "name": "Space Ventures",
+        "industry": "Space Exploration",
+        "contactEmail": "hr@spaceventures.com",
+        "address": "1717 Space Blvd, Cape Canaveral, FL",
+        "jobs": [
+            "60d5ec49f1f6e04b8c8e6e47"
+        ],
+        "createdAt": "2024-05-25T00:00:00Z",
+        "updatedAt": "2024-06-15T00:00:00Z",
+        "isDeleted": false
+    }
+]

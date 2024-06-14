@@ -2,9 +2,11 @@ import httpStatus from 'http-status';
 import catchAsync from '../../utils/catchAsync';
 import { sendResponse } from '../../utils/sendResponse';
 import { JobServices } from './job.service';
+import { CompanyServices } from '../company/company.service';
 
 const createJob = catchAsync(async (req, res) => {
   const result = await JobServices.createJobInDB(req.body);
+  await CompanyServices.addJobToCompany(req.body.company, result._id);
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
@@ -40,14 +42,30 @@ const updateJob = catchAsync(async (req, res) => {
   });
 });
 const deleteJob = catchAsync(async (req, res) => {
-  const result = await JobServices.deleteJobFromDB(req.params.id);
-  sendResponse(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: 'Job deleted successfully',
-    data: result,
-  });
+  const jobId = req.params.id;
+  const result = await JobServices.deleteJobFromDB(jobId);
+
+  if (result && result.company) {
+    await CompanyServices.removeJobFromCompany(
+      result.company.toString(),
+      jobId,
+    );
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Job deleted successfully',
+      data: result,
+    });
+  } else {
+    sendResponse(res, {
+      statusCode: httpStatus.NOT_FOUND,
+      success: false,
+      message: 'Job not found or already deleted',
+      data: null,
+    });
+  }
 });
+
 const getJobByCompany = catchAsync(async (req, res) => {
   const result = await JobServices.getJobByCompany(req.params.companyId);
   sendResponse(res, {

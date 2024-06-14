@@ -3,6 +3,7 @@ import { Job } from './job.model';
 
 const createJobInDB = async (payload: TJob) => {
   const result = await Job.create(payload);
+  return result;
 };
 const getAllJobFromDB = async () => {
   const result = await Job.find();

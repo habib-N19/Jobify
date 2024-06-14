@@ -31,11 +31,22 @@ const deleteCompanyFromDB = async (id: string) => {
   const result = await Company.findByIdAndDelete(id);
   return result;
 };
-
+const addJobToCompany = async (companyId: string, jobId: string) => {
+  await Company.findByIdAndUpdate(companyId, {
+    $push: { jobs: jobId },
+  });
+};
+const removeJobFromCompany = async (companyId: string, jobId: string) => {
+  await Company.findByIdAndUpdate(companyId, {
+    $pull: { jobs: jobId },
+  });
+};
 export const CompanyServices = {
   createCompanyIntoMongoDB,
   getAllCompanyFromDB,
   getSingleCompanyFromDB,
   updateCompanyInDB,
   deleteCompanyFromDB,
+  addJobToCompany,
+  removeJobFromCompany,
 };
