@@ -15,12 +15,17 @@ const createJob = catchAsync(async (req, res) => {
   });
 });
 const getAllJob = catchAsync(async (req, res) => {
-  const result = await JobServices.getAllJobFromDB();
+  const page = parseInt(req.query.page as string) || 1;
+  const limit = parseInt(req.query.limit as string) || 10;
+  const result = await JobServices.getAllJobFromDB(page, limit);
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
     message: 'All jobs fetched successfully',
-    data: result,
+    data: result.jobs,
+    total: result.total,
+    page: result.page,
+    pages: result.pages,
   });
 });
 const getSingleJobById = catchAsync(async (req, res) => {

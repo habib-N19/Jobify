@@ -5,9 +5,16 @@ const createJobInDB = async (payload: TJob) => {
   const result = await Job.create(payload);
   return result;
 };
-const getAllJobFromDB = async () => {
-  const result = await Job.find();
-  return result;
+const getAllJobFromDB = async (page: number, limit: number) => {
+  const skip = (page - 1) * limit;
+  const jobs = await Job.find().skip(skip).limit(limit);
+  const total = await Job.countDocuments();
+  return {
+    jobs,
+    total,
+    page,
+    pages: Math.ceil(total / limit),
+  };
 };
 const getSingleJobFromDB = async (id: string) => {
   const result = await Job.findById(id);
