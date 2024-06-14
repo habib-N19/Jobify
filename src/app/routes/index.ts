@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { UserRoutes } from '../models/user/user.route';
-import { CompanyRoutes } from '../models/company/company.route';
-import { JobRoutes } from '../models/Job/job.route';
+import { UserRoutes } from '../modules/user/user.route';
+import { CompanyRoutes } from '../modules/company/company.route';
+import { JobRoutes } from '../modules/Job/job.route';
 
 const router = Router();
 const moduleRoutes = [
