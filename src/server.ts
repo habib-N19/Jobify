@@ -4,7 +4,9 @@ import app from "./app";
 
 async function server() {
 	try {
-		await mongoose.connect(config.mongodbUri as string);
+		await mongoose.connect(config.mongodbUri as string, {
+			dbName: "Jobify",
+		});
 		app.listen(config.port, () => {
 			console.log(`Server is running at port ${config.port}`);
 		});
