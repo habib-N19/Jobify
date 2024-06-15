@@ -8,11 +8,11 @@ export default function DashboardLLayout() {
 
 
     return (
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-4">
             <Sidebar />
             <main
                 className={cn(
-                    " border w-full",
+                    " border border-gray-200 rounded-md p-4 w-full h-full overflow-y-auto",
 
                 )}
             >

@@ -30,7 +30,7 @@ export default function JobsDashboard() {
                             <Link to={`/dashboard/job-management/${job._id}`}>
                                 <TableCell>{job.title}</TableCell>
                             </Link>
-                            <TableCell>{job.company}</TableCell>
+                            <TableCell>{job.company.name}</TableCell>
                             <TableCell>{job.location}</TableCell>
                             <TableCell>{job.salary}$</TableCell>
 

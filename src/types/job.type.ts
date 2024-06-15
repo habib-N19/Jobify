@@ -1,8 +1,10 @@
+import { TCompany } from "./company.type";
+
 export type TJob = {
 	_id: string;
 	title: string;
 	description: string;
-	company: string;
+	company: TCompany;
 	salary: number;
 	location: string;
 	createdAt: Date;

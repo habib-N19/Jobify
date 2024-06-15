@@ -25,9 +25,9 @@ export function DeleteCompanyDialogue({ id }: { id: string }) {
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
-                    <DialogTitle>Edit profile</DialogTitle>
+                    <DialogTitle>Delete Company</DialogTitle>
                     <DialogDescription>
-                        Make changes to your profile here. Click save when you're done.
+                        Are you sure you want to delete this company?
                     </DialogDescription>
                 </DialogHeader>
                 <DialogFooter>

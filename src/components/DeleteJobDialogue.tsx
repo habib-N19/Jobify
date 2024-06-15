@@ -25,9 +25,10 @@ export function DeleteJobDialogue({ id }: { id: string }) {
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
-                    <DialogTitle>Edit profile</DialogTitle>
+                    <DialogTitle>Delete Job </DialogTitle>
                     <DialogDescription>
-                        Make changes to your profile here. Click save when you're done.
+                        Are you sure you want to delete this job?
+
                     </DialogDescription>
                 </DialogHeader>
                 <DialogFooter>

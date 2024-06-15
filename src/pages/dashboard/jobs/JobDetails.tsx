@@ -19,7 +19,7 @@ export default function JobDetails() {
 
                 JobDetails of {data?.data.title}
             </h1>
-            <Link to={`/dashboard/company-management/${data?.data.company}`}>{data?.data.company}</Link>
+            <Link to={`/dashboard/company-management/${data?.data.company._id}`}>{data?.data.company.name}</Link>
             <div className="text-left w-2/3 mx-auto p-5">
                 <p>Job Description: {data?.data.description}</p>
                 <p>Salary : {data?.data.salary}</p>

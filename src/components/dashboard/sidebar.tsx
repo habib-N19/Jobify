@@ -1,10 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
 
 export default function Sidebar() {
     return (
-        <aside className="flex flex-col space-y-3 p-4 min-w-24">
-            <h1 className="whitespace-nowrap">Jobify Dashboard</h1>
+        <aside className="flex flex-col space-y-3 p-4 min-w-32 text-left">
+            <Link to='/' className="whitespace-nowrap font-bold text-xl">Jobify </Link>
             <NavLink
                 to="/dashboard"
                 className={({ isActive, isPending }) =>
@@ -17,13 +17,14 @@ export default function Sidebar() {
 
             <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
-                    <AccordionTrigger>Job Management</AccordionTrigger>
-                    <AccordionContent>
+                    <AccordionTrigger className="text-nowrap">Job Management</AccordionTrigger>
+                    <AccordionContent className="flex flex-col font-semibold space-y-4">
                         <NavLink
                             to="/dashboard/job-management"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "text-blue-400" : ""
                             }
+                            end
                         >
                             Job Management
                         </NavLink>
@@ -38,8 +39,8 @@ export default function Sidebar() {
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                    <AccordionTrigger>Is it styled?</AccordionTrigger>
-                    <AccordionContent>
+                    <AccordionTrigger className="text-left">Company Management</AccordionTrigger>
+                    <AccordionContent className="flex flex-col font-semibold space-y-4">
                         <NavLink
                             to="/dashboard/company-management"
                             className={({ isActive, isPending }) =>

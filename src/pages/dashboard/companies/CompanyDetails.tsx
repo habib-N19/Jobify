@@ -26,15 +26,15 @@ export default function CompanyDetails() {
             </h1>
 
             <div className="text-left w-2/3 mx-auto p-5">
-                <p>Job Description: {data?.data.address}</p>
-                <p>Salary : {data?.data.industry}</p>
-                <p>Location : {data?.data.contactEmail}</p>
+                <p>Location: {data?.data.address}</p>
+                <p>Industry : {data?.data.industry}</p>
+                <p>Contact : {data?.data.contactEmail}</p>
 
                 <div>
-                    <h1>Available Jobs</h1>
-                    <ul>
+                    <h1 className='text-blue-500'>Available Jobs:</h1>
+                    <ul className='space-y-2 mt-4'>
                         {jobInfo?.data.map((job) => (
-                            <li key={job._id}>
+                            <li key={job._id} className='hover:underline transition-all'>
                                 <Link to={`/dashboard/job-management/${job._id}`}>{job.title}</Link>
                             </li>
                         ))}
