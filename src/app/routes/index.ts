@@ -3,6 +3,7 @@ import { UserRoutes } from '../modules/user/user.route';
 import { CompanyRoutes } from '../modules/company/company.route';
 import { JobRoutes } from '../modules/Job/job.route';
 import { AuthRoutes } from '../modules/auth/auth.route';
+import { protectedRoute } from '../middleware/authMiddleware';
 
 const router = Router();
 const moduleRoutes = [
@@ -12,10 +13,12 @@ const moduleRoutes = [
   },
   {
     path: '/company-management',
+    protectedRoute,
     route: CompanyRoutes,
   },
   {
     path: '/job-management',
+
     route: JobRoutes,
   },
   {
