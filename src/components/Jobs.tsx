@@ -1,5 +1,5 @@
 import { useGetJobsQuery } from "@/redux/features/jobs/jobsApi"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import Loading from "./Loading"
 import { Link } from "react-router-dom"
 import { useState } from "react"

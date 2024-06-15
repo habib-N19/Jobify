@@ -37,7 +37,7 @@ export default function UpdateJob() {
             updateJobForm.reset({
                 title: job.data.title || "",
                 description: job.data.description || "",
-                company: job.data.company || "",
+                company: job.data.company.name || "",
                 salary: job.data.salary || 0,
                 location: job.data.location || "",
             });
