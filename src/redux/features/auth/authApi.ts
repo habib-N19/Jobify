@@ -1,6 +1,6 @@
 import { baseApi } from "@/redux/api/baseApi";
 
-const apiSlice = baseApi.injectEndpoints({
+const authApi = baseApi.injectEndpoints({
 	endpoints: (builder) => ({
 		login: builder.mutation({
 			query: (userInfo) => ({
@@ -12,4 +12,4 @@ const apiSlice = baseApi.injectEndpoints({
 	}),
 });
 
-export const { useLoginMutation } = apiSlice;
+export const { useLoginMutation } = authApi;
