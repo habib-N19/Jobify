@@ -28,7 +28,7 @@ export default function CompaniesDashboard() {
                 <TableBody >
                     {data?.data?.map((company) => (
                         <TableRow key={company._id}>
-                            <Link to={`/dashboard/job-management/${company._id}`}>
+                            <Link to={`/dashboard/company-management/${company._id}`}>
                                 <TableCell>{company.name}</TableCell>
                             </Link>
                             <TableCell>{company.industry}</TableCell>

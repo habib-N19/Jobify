@@ -1,5 +1,5 @@
 import { baseApi } from "@/redux/api/baseApi";
-import { TGetCompaniesResponse } from "@/types";
+import { TGetCompaniesResponse, TGetCompanyResponse } from "@/types";
 
 const companiesApi = baseApi.injectEndpoints({
 	endpoints: (builder) => ({
@@ -12,7 +12,7 @@ const companiesApi = baseApi.injectEndpoints({
 				method: "GET",
 			}),
 		}),
-		getCompanyById: builder.query({
+		getCompanyById: builder.query<TGetCompanyResponse, { companyId: string }>({
 			query: ({ companyId }) => ({
 				url: `/company-management/${companyId}`,
 				method: "GET",
