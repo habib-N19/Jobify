@@ -3,8 +3,8 @@ import { baseApi } from "@/redux/api/baseApi";
 const companiesApi = baseApi.injectEndpoints({
 	endpoints: (builder) => ({
 		getCompanies: builder.query({
-			query: () => ({
-				url: "/company-management",
+			query: ({ page, limit }) => ({
+				url: `/company-management?page=${page}&limit=${limit}`,
 				method: "GET",
 			}),
 		}),

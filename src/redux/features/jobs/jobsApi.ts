@@ -23,9 +23,9 @@ const jobsApi = baseApi.injectEndpoints({
 			}),
 		}),
 		updateJob: builder.mutation({
-			query: (job) => ({
-				url: `/job-management/${job._id}`,
-				method: "PATCH",
+			query: ({ id, job }) => ({
+				url: `/job-management/update/${id}`,
+				method: "PUT",
 				body: job,
 			}),
 		}),

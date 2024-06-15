@@ -3,6 +3,7 @@ import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input";
 import { useUpdateCompanyMutation, useGetCompanyByIdQuery } from "@/redux/features/company-management/companiesApi";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "sonner";
@@ -17,19 +18,25 @@ const updateCompanySchema = z.object({
 
 export default function UpdateCompany() {
     const navigate = useNavigate();
-    const { companyId } = useParams();
-    const { data: company, isLoading, isError } = useGetCompanyByIdQuery(companyId);
+    const { id } = useParams();
+    const companyId = id || ""
+    const { data: company, isLoading, isError } = useGetCompanyByIdQuery({ companyId });
     const [updateCompany] = useUpdateCompanyMutation();
 
-    const createCompanyForm = useForm<z.infer<typeof updateCompanySchema>>({
+    const updateCompanyForm = useForm<z.infer<typeof updateCompanySchema>>({
         resolver: zodResolver(updateCompanySchema),
-        defaultValues: company || {
+        defaultValues: {
             name: "",
             industry: "",
             contactEmail: "",
             address: "",
         },
     });
+    useEffect(() => {
+        if (company) {
+            updateCompanyForm.reset(company);
+        }
+    }, [company, updateCompanyForm]);
 
     const onSubmit = async (values: z.infer<typeof updateCompanySchema>) => {
         const toastId = toast.loading("Updating company...");
@@ -50,10 +57,10 @@ export default function UpdateCompany() {
     return (
         <div className="container mx-auto space-y-8 flex flex-col items-center justify-center">
             <h1 className="text-xl font-semibold md:font-bold text-center md:text-2xl lg:text-3xl">Update Company</h1>
-            <FormProvider {...createCompanyForm}>
-                <form onSubmit={createCompanyForm.handleSubmit(onSubmit)} className="w-1/3 mx-auto flex flex-col text-start space-y-4">
+            <FormProvider {...updateCompanyForm}>
+                <form onSubmit={updateCompanyForm.handleSubmit(onSubmit)} className="w-1/3 mx-auto flex flex-col text-start space-y-4">
                     <FormField
-                        control={createCompanyForm.control}
+                        control={updateCompanyForm.control}
                         name="name"
                         render={({ field }) => (
                             <FormItem>
@@ -66,7 +73,7 @@ export default function UpdateCompany() {
                         )}
                     />
                     <FormField
-                        control={createCompanyForm.control}
+                        control={updateCompanyForm.control}
                         name="industry"
                         render={({ field }) => (
                             <FormItem>
@@ -79,7 +86,7 @@ export default function UpdateCompany() {
                         )}
                     />
                     <FormField
-                        control={createCompanyForm.control}
+                        control={updateCompanyForm.control}
                         name="contactEmail"
                         render={({ field }) => (
                             <FormItem>
@@ -92,7 +99,7 @@ export default function UpdateCompany() {
                         )}
                     />
                     <FormField
-                        control={createCompanyForm.control}
+                        control={updateCompanyForm.control}
                         name="address"
                         render={({ field }) => (
                             <FormItem>

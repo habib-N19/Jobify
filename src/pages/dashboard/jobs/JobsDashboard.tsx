@@ -31,7 +31,7 @@ export default function JobsDashboard() {
                             <TableCell>{job.salary}$</TableCell>
 
                             <TableCell className="flex justify-end gap-2 items-center">
-                                <Button variant={"outline"}><Edit /></Button>
+                                <Link to={`/dashboard/job-management/update/${job._id}`}><Edit /></Link>
                                 <Button variant={'outline'}><TrashIcon /></Button>
                             </TableCell>
                         </TableRow>
