@@ -1,7 +1,7 @@
-import { useForm } from "react-hook-form"
+import { FormProvider, useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { useLoginMutation } from "@/redux/features/auth/authApi"
@@ -56,7 +56,7 @@ export default function Login() {
 
         <h1 className="text-xl font-semibold md:font-bold text-center md:text-2xl lg:text-3xl ">Login</h1>
         {/* got from shadcn docs ==> https://ui.shadcn.com/docs/components/form */}
-        <Form  {...loginForm}>
+        <FormProvider  {...loginForm}>
             <form onSubmit={loginForm.handleSubmit(onSubmit)} className="w-1/3 mx-auto flex flex-col text-start space-y-4">
                 <FormField
                     control={loginForm.control}
@@ -84,9 +84,9 @@ export default function Login() {
                         </FormItem>
                     )}
                 />
-                <Button type="submit">Submit</Button>
+                <Button type="submit">Login</Button>
             </form>
-        </Form>
+        </FormProvider>
 
 
 

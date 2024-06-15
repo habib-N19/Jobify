@@ -17,7 +17,7 @@ const jobsApi = baseApi.injectEndpoints({
 		}),
 		createJob: builder.mutation({
 			query: (job) => ({
-				url: `/job-management`,
+				url: `/job-management/create-job`,
 				method: "POST",
 				body: job,
 			}),
