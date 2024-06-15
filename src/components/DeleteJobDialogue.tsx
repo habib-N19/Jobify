@@ -12,7 +12,7 @@ import { Button } from "./ui/button"
 import { TrashIcon } from "lucide-react"
 import { useDeleteJobMutation } from "@/redux/features/jobs/jobsApi"
 
-export function DeleteDialogue({ id }: { id: string }) {
+export function DeleteJobDialogue({ id }: { id: string }) {
     const [deleteJob] = useDeleteJobMutation()
     const handleDelete = async () => {
         const res = await deleteJob({ jobId: id })

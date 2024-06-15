@@ -24,24 +24,31 @@ export default function UpdateCompany() {
     const [updateCompany] = useUpdateCompanyMutation();
 
     const updateCompanyForm = useForm<z.infer<typeof updateCompanySchema>>({
-        resolver: zodResolver(updateCompanySchema),
-        defaultValues: {
-            name: "",
-            industry: "",
-            contactEmail: "",
-            address: "",
-        },
+        resolver: zodResolver(updateCompanySchema)
     });
     useEffect(() => {
         if (company) {
-            updateCompanyForm.reset(company);
+            updateCompanyForm.reset({
+                name: company.data.name || "",
+                industry: company.data.industry || "",
+                contactEmail: company.data.contactEmail || "",
+                address: company.data.address || ""
+
+            });
         }
     }, [company, updateCompanyForm]);
 
     const onSubmit = async (values: z.infer<typeof updateCompanySchema>) => {
+        const updatedCompany = {
+            name: values.name,
+            industry: values.industry,
+            contactEmail: values.contactEmail,
+            address: values.address
+        };
         const toastId = toast.loading("Updating company...");
         try {
-            const response = await updateCompany({ companyId, ...values }).unwrap();
+
+            const response = await updateCompany({ id: companyId, company: updatedCompany }).unwrap();
             console.log(response);
             toast.success("Company updated successfully", { id: toastId, duration: 3000 });
             navigate("/dashboard/company-management");

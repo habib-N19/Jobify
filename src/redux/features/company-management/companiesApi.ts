@@ -1,15 +1,19 @@
 import { baseApi } from "@/redux/api/baseApi";
+import { TGetCompaniesResponse } from "@/types";
 
 const companiesApi = baseApi.injectEndpoints({
 	endpoints: (builder) => ({
-		getCompanies: builder.query({
-			query: ({ page, limit }) => ({
+		getCompanies: builder.query<
+			TGetCompaniesResponse,
+			{ page: number; limit: number }
+		>({
+			query: ({ page = 1, limit = 10 }) => ({
 				url: `/company-management?page=${page}&limit=${limit}`,
 				method: "GET",
 			}),
 		}),
 		getCompanyById: builder.query({
-			query: (companyId) => ({
+			query: ({ companyId }) => ({
 				url: `/company-management/${companyId}`,
 				method: "GET",
 			}),
@@ -22,9 +26,9 @@ const companiesApi = baseApi.injectEndpoints({
 			}),
 		}),
 		updateCompany: builder.mutation({
-			query: (company) => ({
-				url: `/company-management/${company._id}`,
-				method: "PATCH",
+			query: ({ id, company }) => ({
+				url: `/company-management/update/${id}`,
+				method: "PUT",
 				body: company,
 			}),
 		}),
