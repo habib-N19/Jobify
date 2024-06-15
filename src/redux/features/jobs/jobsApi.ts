@@ -10,7 +10,7 @@ const jobsApi = baseApi.injectEndpoints({
 			}),
 		}),
 		getJobById: builder.query<TGetJobResponse, { jobId: string }>({
-			query: (jobId) => ({
+			query: ({ jobId }) => ({
 				url: `/job-management/${jobId}`,
 				method: "GET",
 			}),
@@ -30,14 +30,14 @@ const jobsApi = baseApi.injectEndpoints({
 			}),
 		}),
 		deleteJob: builder.mutation({
-			query: (jobId) => ({
+			query: ({ jobId }) => ({
 				url: `/job-management/${jobId}`,
 				method: "DELETE",
 			}),
 		}),
 		getJobsByCompanyId: builder.query<TGetJobsResponse, { companyId: string }>({
 			query: ({ companyId }) => ({
-				url: `/job-management/${companyId}`,
+				url: `/job-management/company/${companyId}`,
 				method: "GET",
 			}),
 		}),

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useGetJobsQuery } from "@/redux/features/jobs/jobsApi";
-import { Delete, Edit, Trash2Icon, TrashIcon } from "lucide-react";
+import { Edit, TrashIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 
