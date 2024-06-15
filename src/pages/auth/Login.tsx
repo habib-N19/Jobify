@@ -4,6 +4,12 @@ import { z } from "zod"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { useLoginMutation } from "@/redux/features/auth/authApi"
+import { useAppDispatch } from "@/redux/hooks"
+import { useNavigate } from "react-router-dom"
+import { toast } from "sonner"
+import { verifyAccessToken } from "@/utils/verifyAccessToken"
+import { setUser } from "@/redux/features/auth/authSlice"
 
 const loginFormSchema = z.object({
     email: z.string().email({ message: "Please enter a valid email" }),
@@ -12,6 +18,9 @@ const loginFormSchema = z.object({
 
 
 export default function Login() {
+    const dispatch = useAppDispatch()
+    const navigate = useNavigate()
+    const [login] = useLoginMutation()
     const loginForm = useForm<z.infer<typeof loginFormSchema>>({
         resolver: zodResolver(loginFormSchema),
         defaultValues: {
@@ -19,7 +28,26 @@ export default function Login() {
             password: "admin"
         }
     })
-    const onSubmit = (values: z.infer<typeof loginFormSchema>) => {
+    const onSubmit = async (values: z.infer<typeof loginFormSchema>) => {
+        const toastId = toast.loading("Logging in...")
+        try {
+            const userInfo = {
+                email: values.email,
+                password: values.password
+            }
+            const response = await login(userInfo).unwrap()
+            console.log(response);
+            const user = verifyAccessToken(response.data.accessToken)
+            dispatch(setUser(user))
+            toast.success("Logged in successfully", { id: toastId, duration: 3000 })
+            navigate("/dashboard")
+        } catch (error) {
+            toast.error("Error logging in", { id: toastId, duration: 3000 })
+
+
+        }
+
+
         console.log(values)
     }
 
