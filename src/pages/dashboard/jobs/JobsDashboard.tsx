@@ -1,12 +1,13 @@
-import { Button } from "@/components/ui/button";
+import { DeleteDialogue } from "@/components/DeleteDialogue";
+
 import { Table, TableBody, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useGetJobsQuery } from "@/redux/features/jobs/jobsApi";
-import { Edit, TrashIcon } from "lucide-react";
+import { Edit } from "lucide-react";
 import { Link } from "react-router-dom";
 
 
 export default function JobsDashboard() {
-    const { data, isLoading } = useGetJobsQuery({ page: 1, limit: 10 })
+    const { data, isLoading } = useGetJobsQuery({ page: 1, limit: 100 })
     if (isLoading) return <div>Loading...</div>
     return (
         <div>
@@ -32,7 +33,7 @@ export default function JobsDashboard() {
 
                             <TableCell className="flex justify-end gap-2 items-center">
                                 <Link to={`/dashboard/job-management/update/${job._id}`}><Edit /></Link>
-                                <Button variant={'outline'}><TrashIcon /></Button>
+                                <DeleteDialogue id={job._id} />
                             </TableCell>
                         </TableRow>
                     ))}
