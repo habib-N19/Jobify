@@ -8,7 +8,7 @@ const createJobInDB = async (payload: TJob) => {
 
 const getAllJobFromDB = async (page: number, limit: number) => {
   const skip = (page - 1) * limit;
-  const jobs = await Job.find().skip(skip).limit(limit);
+  const jobs = await Job.find().skip(skip).limit(limit).populate('company');
   const total = await Job.countDocuments();
   return {
     jobs,
@@ -19,7 +19,7 @@ const getAllJobFromDB = async (page: number, limit: number) => {
 };
 
 const getSingleJobFromDB = async (id: string) => {
-  const result = await Job.findById(id);
+  const result = await Job.findById(id).populate('company');
   return result;
 };
 
