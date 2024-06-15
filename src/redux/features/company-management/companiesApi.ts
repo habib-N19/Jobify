@@ -16,7 +16,7 @@ const companiesApi = baseApi.injectEndpoints({
 		}),
 		createCompany: builder.mutation({
 			query: (company) => ({
-				url: "/company-management",
+				url: "/company-management/create-company",
 				method: "POST",
 				body: company,
 			}),

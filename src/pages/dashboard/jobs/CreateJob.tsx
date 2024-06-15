@@ -44,7 +44,7 @@ export default function CreateJob() {
             const response = await createJob(newJob).unwrap();
             console.log(response);
             toast.success("Job created successfully", { id: toastId, duration: 3000 });
-            navigate("/jobs");
+            navigate("/dashboard/job-management");
         } catch (error) {
             toast.error("Error creating job", { id: toastId, duration: 3000 });
         }
