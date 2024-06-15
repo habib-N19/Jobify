@@ -2,6 +2,12 @@ import App from '@/App';
 
 import Login from '@/pages/auth/Login';
 import Dashboard from '@/pages/dashboard/Dashboard';
+import CompaniesDashboard from '@/pages/dashboard/companies/CompaniesDashboard';
+import CompanyDetails from '@/pages/dashboard/companies/CompanyDetails';
+import CreateCompany from '@/pages/dashboard/companies/CreateCompany';
+import CreateJob from '@/pages/dashboard/jobs/CreateJob';
+import JobDetails from '@/pages/dashboard/jobs/JobDetails';
+import JobsDashboard from '@/pages/dashboard/jobs/JobsDashboard';
 import HomePage from '@/pages/home/HomePage';
 import { createBrowserRouter } from 'react-router-dom';
 
@@ -27,24 +33,33 @@ const router = createBrowserRouter(
                 },
                 {
                     path: '/dashboard/company-management',
-                    element: <h2>company management</h2>,
-                    children: [
-                        {
-                            path: ':id',
-                            element: <h1>id</h1>
-                        }
-                    ]
+                    element: <CompaniesDashboard />
+                },
+
+                {
+                    path: '/dashboard/company-management/:id',
+                    element: <CompanyDetails />
                 },
                 {
+                    path: '/dashboard/company-management/add-company',
+                    element: <CreateCompany />
+                }
+
+                ,
+                {
                     path: '/dashboard/job-management',
-                    element: <h2>job management</h2>,
-                    children: [
-                        {
-                            path: ':id',
-                            element: <h1>id</h1>
-                        }
-                    ]
+                    element: <JobsDashboard />,
+
                 },
+                {
+                    path: '/dashboard/job-management/:id',
+                    element: <JobDetails />
+                },
+                {
+                    path: '/dashboard/job-management/add-job',
+                    element: <CreateJob />
+                }
+
 
             ]
         },
