@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import './App.css'
 import RootLayout from './components/layouts/rootLayout/RootLayout'
 import DashboardLayout from './components/layouts/dashboardLayout/DashboardLayout'
+import PrivateRoute from './components/layouts/dashboardLayout/PrivateLayout'
 
 function App() {
   const location = useLocation()
@@ -11,7 +12,13 @@ function App() {
   return (
     <div className=''>
       {
-        isDashboard ? (<DashboardLayout />) : (<RootLayout />)
+        isDashboard ? (
+
+          <PrivateRoute >
+            <DashboardLayout />
+          </PrivateRoute>
+
+        ) : (<RootLayout />)
 
 
       }

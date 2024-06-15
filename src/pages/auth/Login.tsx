@@ -36,9 +36,9 @@ export default function Login() {
                 password: values.password
             }
             const response = await login(userInfo).unwrap()
-            console.log(response);
-            const user = verifyAccessToken(response.data.accessToken)
-            dispatch(setUser(user))
+            console.log(response.data.accessToken);
+            const user = verifyAccessToken(response.data.accessToken);
+            dispatch(setUser({ user: user, token: response.data.accessToken }))
             toast.success("Logged in successfully", { id: toastId, duration: 3000 })
             navigate("/dashboard")
         } catch (error) {
