@@ -1,12 +1,21 @@
 
+import { useLocation } from 'react-router-dom'
 import './App.css'
-import HomePage from './pages/home/HomePage'
+import RootLayout from './components/layouts/rootLayout/RootLayout'
+import DashboardLayout from './components/layouts/dashboardLayout/DashboardLayout'
 
 function App() {
-
+  const location = useLocation()
+  const isDashboard = location.pathname.includes('/dashboard')
 
   return (
-    <div><HomePage /></div>
+    <div className=''>
+      {
+        isDashboard ? (<DashboardLayout />) : (<RootLayout />)
+
+
+      }
+    </div>
   )
 }
 

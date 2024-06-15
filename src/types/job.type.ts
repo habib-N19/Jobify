@@ -17,3 +17,8 @@ export type TGetJobsResponse = {
 	page: number;
 	pages: number;
 };
+export type TGetJobResponse = {
+	success: boolean;
+	message: string;
+	data: TJob;
+};
