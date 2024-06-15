@@ -29,6 +29,7 @@ const getAllJob = catchAsync(async (req, res) => {
   });
 });
 const getSingleJobById = catchAsync(async (req, res) => {
+  console.log(req.params.id.toString());
   const result = await JobServices.getSingleJobFromDB(req.params.id);
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -38,6 +39,7 @@ const getSingleJobById = catchAsync(async (req, res) => {
   });
 });
 const updateJob = catchAsync(async (req, res) => {
+  console.log('update', req.body, 'id', req.params.id);
   const result = await JobServices.updateJobInDB(req.params.id, req.body);
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -72,7 +74,8 @@ const deleteJob = catchAsync(async (req, res) => {
 });
 
 const getJobByCompany = catchAsync(async (req, res) => {
-  const result = await JobServices.getJobByCompany(req.params.companyId);
+  const result = await JobServices.getJobByCompany(req.params.id);
+
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,

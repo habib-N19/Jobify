@@ -19,6 +19,7 @@ const getAllCompanyFromDB = async (page: number, limit: number) => {
 };
 const getSingleCompanyFromDB = async (id: string) => {
   const result = await Company.findById(id);
+
   return result;
 };
 const updateCompanyInDB = async (id: string, payload: Partial<TCompany>) => {

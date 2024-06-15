@@ -37,6 +37,7 @@ const getSingleCompany = catchAsync(async (req, res) => {
   });
 });
 const updateCompany = catchAsync(async (req, res) => {
+  console.log('update company ', req.body, req.params.id);
   const result = await CompanyServices.updateCompanyInDB(
     req.params.id,
     req.body,

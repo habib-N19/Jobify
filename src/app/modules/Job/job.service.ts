@@ -5,6 +5,7 @@ const createJobInDB = async (payload: TJob) => {
   const result = await Job.create(payload);
   return result;
 };
+
 const getAllJobFromDB = async (page: number, limit: number) => {
   const skip = (page - 1) * limit;
   const jobs = await Job.find().skip(skip).limit(limit);
@@ -16,22 +17,27 @@ const getAllJobFromDB = async (page: number, limit: number) => {
     pages: Math.ceil(total / limit),
   };
 };
+
 const getSingleJobFromDB = async (id: string) => {
   const result = await Job.findById(id);
   return result;
 };
+
 const updateJobInDB = async (id: string, payload: Partial<TJob>) => {
   const result = await Job.findByIdAndUpdate({ _id: id }, payload, {
     new: true,
   });
   return result;
 };
+
 const deleteJobFromDB = async (id: string) => {
   const result = await Job.findByIdAndDelete(id);
   return result;
 };
+
 const getJobByCompany = async (companyId: string) => {
-  const result = await Job.find({ company: companyId });
+  console.log(companyId);
+  const result = await Job.find({ company: companyId }).populate('company');
   return result;
 };
 

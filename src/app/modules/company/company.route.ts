@@ -1,10 +1,11 @@
-import express from "express";
-import { CompanyController } from "./company.controller";
+import express from 'express';
+import { CompanyController } from './company.controller';
 const router = express.Router();
-router.post("/create-company", CompanyController.createCompany);
-router.get("/:companyId", CompanyController.getSingleCompany);
-router.patch("/:companyId", CompanyController.updateCompany);
-router.delete("/:companyId", CompanyController.deleteCompany);
-router.get("/", CompanyController.getAllCompany);
+router.post('/create-company', CompanyController.createCompany);
+router.get('/:id', CompanyController.getSingleCompany);
+
+router.put('/update/:id', CompanyController.updateCompany);
+router.delete('/:id', CompanyController.deleteCompany);
+router.get('/', CompanyController.getAllCompany);
 
 export const CompanyRoutes = router;
