@@ -24,8 +24,8 @@ export default function Login() {
     const loginForm = useForm<z.infer<typeof loginFormSchema>>({
         resolver: zodResolver(loginFormSchema),
         defaultValues: {
-            email: "admin@jobify.com",
-            password: "admin"
+            email: "",
+            password: ""
         }
     })
     const onSubmit = async (values: z.infer<typeof loginFormSchema>) => {
@@ -89,7 +89,20 @@ export default function Login() {
         </FormProvider>
 
 
+        <div className="text-center">
+            <p>use the credentials to login and test out</p>
+            <p>email: <strong>
+                admin@jobify.com
+            </strong>
+            </p>
+            <p>password:
+                <strong>
+                    admin
+                </strong>
+            </p>
 
+
+        </div>
     </div>
     )
 }
