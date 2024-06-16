@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:prod": "node .dist/server.js",
+    "start:prod": "node dist/server.js",
     "start:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
     "lint": "eslint src --ignore-path .eslintignore --ext .ts",
     "lint:fix": "npx eslint src --fix",
-    "prettier": "prettier --ignore-path .gitignore --write \".src/**/*.+(ts|js|json|md)\"",
-    "prettier:check": "prettier --ignore-path .gitignore --check \".src/**/*.+(ts|js|json|md)\"",
+    "prettier": "prettier --ignore-path .gitignore --write \"src/**/*.+(ts|js|json|md)\"",
+    "prettier:check": "prettier --ignore-path .gitignore --check \"src/**/*.+(ts|js|json|md)\"",
     "prettier:fix": "npx prettier --write src"
   },
   "keywords": [],
