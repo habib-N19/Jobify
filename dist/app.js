@@ -11,7 +11,7 @@ const notFound_1 = __importDefault(require("./app/middleware/notFound"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)({
-    origin: 'http://localhost:5173',
+    origin: 'https://jobify-azure-two.vercel.app',
     credentials: true,
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
 }));

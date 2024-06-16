@@ -7,7 +7,7 @@ const app: Application = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: 'https://jobify-azure-two.vercel.app/',
+    origin: 'https://jobify-azure-two.vercel.app',
     credentials: true,
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
   }),
