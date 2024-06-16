@@ -1,4 +1,12 @@
-## Project Requirements
+## Project Requirement
+
+Site Live Url : [Jobify](https://jobify-azure-two.vercel.app/)
+Backend Url : [Jobify Backend](https://jobify-rt4m.onrender.com/)
+
+```plaintext
+ Email: admin@jobify.com
+ Password: admin
+```
 
 - Home page to show all the jobs
 - (optional) Job detail page & apply button
