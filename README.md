@@ -1,5 +1,8 @@
 # Jobify Backend
 
+Site Live Url : [Jobify](https://jobify-azure-two.vercel.app/)
+Backend Url : [Jobify Backend](https://jobify-rt4m.onrender.com/)
+
 ## Admin Credentials
 
 ```plaintext
